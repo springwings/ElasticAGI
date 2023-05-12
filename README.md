@@ -25,4 +25,4 @@ ElasticSearch安装不再赘述。
 * 5) 修改web_demo2.py中的ef_path变量为ElasticFlow主机地址，启动web_demo2.py。
 
 ### 说明 
-知识更新参照kg范例往下添加即可，系统会自动更新，注意其中id不能重复
+知识更新参照 kg 知识数据文件夹中的范例往下添加即可，系统会在线自动更新系统整体知识，注意其中 id字段不能重复,content字段为知识的主体内容
