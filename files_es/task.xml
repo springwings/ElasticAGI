@@ -1,0 +1,100 @@
+<config>  
+<dataflow>
+ 
+		<TransParam>  
+			<param>
+				<name>deltaCron</name>
+				<value>*/5 * * * * ?</value>
+			</param> 
+			<param>
+				<name>logLevel</name>
+				<value>1</value>
+                                <!--- 日志级别,默认0输出所有info日志,1输出统计类info日志 2 关闭 -->
+			</param>
+			<param>
+				<name>writeTo</name>
+				<value>kges</value>
+			</param>  
+
+                       <!--- pipe start parameters -->
+		 
+			<param> 
+				<name>readFrom</name> 
+				<value>csv_folder</value> 
+			</param>
+                           
+                       <param>
+                             <name>writeMechanism</name>
+                             <value>normal</value>
+                       </param>
+                       <param>
+				<name>writeType</name>
+				<value>full</value>
+		       </param>  
+			
+                        <!--- pipe compute service parameters -->
+                        
+                        <!--- pipe search service parameters -->
+                         <param>
+				<name>searchFrom</name>
+				<value>kges</value>
+			</param>  
+			 
+		</TransParam>
+
+                <ReaderParam>   
+                        <param>
+				<name>keyField</name>
+				<value>id</value>
+			</param>
+			<param>
+				<name>scanField</name>
+				<value>update_time</value>
+			</param> 
+</ReaderParam>  
+<WriterParam>
+   <param>
+	<name>writeKey</name>
+	<value>id</value>
+   </param>
+   <param>
+	<name>keyType</name>
+	<value>unique</value>
+   </param>
+   <param>
+	<name>storageStructure</name>
+	<value> <![CDATA[ {
+    "settings" : {
+        "index" : {
+            "number_of_shards" : 1,
+            "number_of_replicas" : 0
+        }
+    }
+}' ]]></value>
+   </param>
+
+  <fields>
+<field name="id" indexed="true" stored="true" indextype="keyword" alias="id" paramtype="java.lang.String" />  
+<field name="title" indexed="true" stored="true" indextype="keyword" alias="title" paramtype="java.lang.String" /> 
+<field name="content" indexed="true" stored="true" indextype="text" alias="content" analyzer="ik_max_word" dsl='{"search_analyzer": "ik_smart"}' paramtype="java.lang.String" />  
+<field name="update_time" indexed="true" stored="false" indextype="long" alias="update_time" paramtype="org.elasticflow.field.handler.LongRangeType" /> 
+  </fields>
+</WriterParam>
+
+
+<SearcherParam> 
+<param>
+		<name>start</name>
+		<paramtype>java.lang.Integer</paramtype>
+		<defaultValue>0</defaultValue>
+	</param>
+	<param>
+		<name>count</name>
+		<paramtype>java.lang.Integer</paramtype>
+		<defaultValue>1</defaultValue>
+	</param>
+	 
+</SearcherParam>
+</dataflow>  
+
+</config> 
