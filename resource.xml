@@ -3,7 +3,7 @@
 	<socket>
 		<name>kges</name>
 		<type>es</type>
-		<host>10.10.121.121 填写实际的ElasticSearch服务器地址</host>
+		<host>10.10.10.1</host>
 	</socket>
 	<socket>
 		<name>csv_folder</name>

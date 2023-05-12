@@ -10,6 +10,7 @@ st.set_page_config(
     page_icon=":robot:"
 )
 
+ef_path = "http://10.10.10.1:8080/files_es"
 
 @st.cache_resource
 def get_model():
@@ -22,7 +23,7 @@ def get_model():
 MAX_TURNS = 20
 MAX_BOXES = MAX_TURNS * 2
 
-ef_path = "http://ip:8080/files_es"
+
 
 def predict(input, max_length, top_p, temperature, history=None):
     tokenizer, model = get_model()

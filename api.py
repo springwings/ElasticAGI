@@ -8,7 +8,7 @@ from utils import prefixContent
 DEVICE = "cuda"
 DEVICE_ID = "0"
 CUDA_DEVICE = f"{DEVICE}:{DEVICE_ID}" if DEVICE_ID else DEVICE
-
+ef_path = "http://ip:8080/files_es"
 
 def torch_gc():
     if torch.cuda.is_available():
@@ -18,8 +18,6 @@ def torch_gc():
 
 
 app = FastAPI()
-
-ef_path = "http://ip:8080/files_es"
 
 @app.post("/")
 async def create_item(request: Request):
