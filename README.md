@@ -2,7 +2,7 @@
 
  
 <p align="center">
-    👋 ，项目是一个可以动态扩展语言模型的知识进行问答的开源项目，[chatglm](https://github.com/THUDM/ChatGLM-6B) 基础上进行构建。  
+    👋 ElasticChatGLM项目是一个可以动态扩展语言模型的知识进行问答的开源项目，[chatglm](https://github.com/THUDM/ChatGLM-6B) 基础上进行构建。  
 </p>
 
 ## 介绍
