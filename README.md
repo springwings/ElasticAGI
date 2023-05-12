@@ -22,3 +22,6 @@ ElasticSearch安装不再赘述。
 * 4) 拷贝本项目下的 files_es 文件夹到 /opt/EF/datas/INSTANCES 文件夹下;
 * 4) 拷贝本项目下的 kg 知识数据文件夹到 /opt/EF/ 文件夹下;
 * 5) 启动web_demo2.py，完毕.
+
+### 说明 
+知识更新参照kg范例往下添加即可，系统会自动更新，注意其中id不能重复
