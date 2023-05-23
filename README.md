@@ -1,6 +1,6 @@
 ## ElasticChatGLM 介绍
 
-ElasticChatGLM 是一个开源的、支持知识动态扩展的对话语言模型，[chatglm](https://github.com/THUDM/ChatGLM-6B) 基础上进行构建。ElasticChatGLM 使用了和 langchain 相似的技术，针对对话进行了优化。 
+ElasticChatGLM 是一个开源的、支持知识动态扩展的对话语言模型框架，[chatglm](https://github.com/THUDM/ChatGLM-6B) 基础上进行构建。ElasticChatGLM 使用了和 langchain 相似的技术，针对对话进行了优化。 
 
 ## 使用方式
 
@@ -26,3 +26,13 @@ ElasticSearch安装不再赘述。
 
 ### 说明 
 知识更新参照 kg 知识数据文件夹中的范例往下添加即可，系统会在线自动更新系统整体知识，注意其中 id字段不能重复,content字段为知识的主体内容
+
+## Citing ElasticChatGLM 
+
+```bibtex
+@article{agtabular,
+  title={ElasticChatGLM: 一个开源的、支持知识动态扩展的对话语言模型框架},
+  author={chengwen}, 
+  year={2023}
+}
+```
