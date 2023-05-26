@@ -41,7 +41,10 @@ def predict(input, max_length, top_p, temperature, history=None):
         message(input, avatar_style="big-smile", key=str(len(history)) + "_user")
         st.write("AI正在回复:")
         with st.empty():
-            contexts = prefixContent(ef_path,input)
+            if checkdomain(input):
+                contexts = prefixContent(ef_path,input)
+            else:
+                contexts = ""
             _history  = history.copy()
             _history.append(tuple([contexts,""]))
             for response, chats in model.stream_chat(tokenizer, input, _history, max_length=max_length, top_p=top_p,
