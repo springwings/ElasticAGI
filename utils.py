@@ -6,7 +6,7 @@ from torch.nn import Module
 from transformers import AutoModel
 
 def prefixContent(ef_path,qu,top=3,score=36):
-    param =  param = {"search_dsl":"(content:"+qs[0]+" or title:"+qs[0]+"^3)","count":top,"post_filter":{"__score":str(score)+"_"}}  
+    param  = {"search_dsl":"(content:"+qs[0]+" or title:"+qs[0]+"^3)","count":top,"post_filter":{"__score":str(score)+"_"}}  
     contents = "" 
     ret = requests.post(ef_path,json=param,timeout=10)
     if ret.json()['response']['datas']['total']>0:
