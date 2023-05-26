@@ -12,7 +12,7 @@ def prefixContent(ef_path,qu,top=3):
     if ret.json()['response']['datas']['total']>0:
         for dt in ret.json()['response']['datas']['lists']:
             contents += dt["content"]
-    return contents
+    return '"'+contents+"，根据以上信息如实回答后面的问题。"
 
 def checkdomain(q,domain=["政务","经济"]):
     tokenizer, model = get_model()
