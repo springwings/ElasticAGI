@@ -7,12 +7,29 @@ from transformers import AutoModel
 
 def prefixContent(ef_path,qu,top=3):
     param = {"content":qu,"count":top}
-    contents = ""
+    contents = "" 
     ret = requests.post(ef_path,json=param,timeout=10)
     if ret.json()['response']['datas']['total']>0:
         for dt in ret.json()['response']['datas']['lists']:
             contents += dt["content"]
     return contents
+
+def checkdomain(q,domain=["政务","经济"]):
+    tokenizer, model = get_model()
+    prompt = '"'+q+'"'+",这句话涉及的领域是什么？"
+    response, _ = model.chat(tokenizer,
+                                   prompt,
+                                   history=[],
+                                   max_length=2048,
+                                   top_p=0.7,
+                                   temperature=0.95)
+    tmp = response.split("涉及的领域")
+    if len(tmp)>1:
+        for d in domain:
+            if tmp[1].find(d)!=-1:
+                return True       
+    return False
+
 
 def auto_configure_device_map(num_gpus: int) -> Dict[str, int]:
     # transformer.word_embeddings 占用1层
