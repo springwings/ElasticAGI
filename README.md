@@ -40,11 +40,11 @@ ElasticSearch安装不再赘述。
 * 增加插件能力向AGI方向靠拢 
 
 
-## Citing ElasticChatGLM 
+## Citing ElasticAGI 
 
 ```bibtex
 @article{agtabular,
-  title={ElasticChatGLM: 一个开源的、支持知识动态扩展的对话语言模型框架},
+  title={ElasticAGI: 一个开源的、支持知识、能力动态扩展的，且基于LLMs的AGI引擎框架},
   author={chengwen}, 
   year={2023}
 }
