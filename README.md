@@ -1,6 +1,6 @@
 ## ElasticAGI 介绍
 
-ElasticAGI 是一个开源的、支持知识、能力动态扩展的AGI框架。 
+ElasticAGI 是一个开源的、支持知识、能力动态扩展的，且基于LLMs的AGI引擎框架。 
 
 ## 使用方式
 
