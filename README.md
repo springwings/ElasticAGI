@@ -1,6 +1,6 @@
-## ElasticChatGLM 介绍
+## ElasticAGI 介绍
 
-ElasticChatGLM 是一个开源的、支持知识动态扩展的对话语言模型框架，[chatglm](https://github.com/THUDM/ChatGLM-6B) 基础上进行构建。ElasticChatGLM 使用了和 langchain 相似的技术，针对对话进行了优化。 
+ElasticAGI 是一个开源的、支持知识、能力动态扩展的AGI框架。 
 
 ## 使用方式
 
