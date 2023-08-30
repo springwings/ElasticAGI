@@ -31,6 +31,10 @@ ElasticSearch安装不再赘述。
 * 增加领域自动判断决策
 * 增加回答信息控制
 
+### 计划
+* 增加插件能力向AGI方向靠拢 
+
+
 ## Citing ElasticChatGLM 
 
 ```bibtex
