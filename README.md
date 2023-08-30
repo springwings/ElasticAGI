@@ -22,10 +22,10 @@ ElasticSearch安装不再赘述。
 
 ### 部署步骤 
 * 1) 下载ElasticFlow 5.6.1 jar包，并参考 [elasticflow部署运行](https://github.com/springwings/elasticflow/wiki/v5.x-%E9%83%A8%E7%BD%B2%E8%BF%90%E8%A1%8C) 进行部署。  
-* 2) 拷贝本项目下的 config.properties 到 /opt/EF/config 文件夹下;
-* 3) 拷贝本项目下的 resource.xml 到 /opt/EF/datas 文件夹下，注意修改csv_folder该项的地址以及kges中的elasticsearch的地址;
-* 4) 拷贝本项目下的 files_es 文件夹到 /opt/EF/datas/INSTANCES 文件夹下;
-* 4) 拷贝本项目下的 kg 知识数据文件夹到 /opt/EF/ 文件夹下;
+* 2) 拷贝ExampleDatas/config.properties 到 /opt/EF/config 文件夹下;
+* 3) 拷贝ExampleDatas/resource.xml 到 /opt/EF/datas 文件夹下，注意修改csv_folder该项的地址以及kges中的elasticsearch的地址;
+* 4) 拷贝ExampleDatas/files_es 文件夹到 /opt/EF/datas/INSTANCES 文件夹下;
+* 4) 拷贝ExampleDatas/kg 知识数据文件夹到 /opt/EF/ 文件夹下;
 * 5) 启动ElasticFlow
 * 5) 修改web_demo2.py中的ef_path变量为ElasticFlow主机地址，启动web_demo2.py。
 
