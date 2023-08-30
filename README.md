@@ -15,6 +15,11 @@ ElasticAGI 是一个开源的、支持知识、能力动态扩展的AGI框架。
 ### 环境安装
 除了需要满足 [chatglm](https://github.com/THUDM/ChatGLM-6B) 的安装环境外，还需要部署 [ElasticFlow](https://github.com/springwings/elasticflow) 与ElasticSearch搜索引擎。
 ElasticSearch安装不再赘述。
+
+### 软件要求 
+- Python >= 3.8
+- ElasticFlow >= 5.6.2
+
 ### 部署步骤 
 * 1) 下载ElasticFlow 5.6.1 jar包，并参考 [elasticflow部署运行](https://github.com/springwings/elasticflow/wiki/v5.x-%E9%83%A8%E7%BD%B2%E8%BF%90%E8%A1%8C) 进行部署。  
 * 2) 拷贝本项目下的 config.properties 到 /opt/EF/config 文件夹下;
